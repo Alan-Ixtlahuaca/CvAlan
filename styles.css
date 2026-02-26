@@ -320,6 +320,19 @@ body::after {
     z-index: 1;
 }
 
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 0 4px rgba(100, 181, 246, 0.5));
+    transition: all 0.3s ease;
+}
+
+.header-contact .contact-item:hover .contact-icon {
+    filter: drop-shadow(0 0 8px rgba(100, 181, 246, 0.8));
+    transform: scale(1.1) rotate(5deg);
+}
+
+
 .nav-buttons {
     display: flex;
     justify-content: center;
