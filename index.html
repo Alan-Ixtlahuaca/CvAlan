@@ -1,295 +1,351 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Daniel Ixtlahuaca Casas - CV</title>
+    <title>Alan Daniel Ixtlahuaca Casas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Fondo decorativo -->
-    <div class="bg-decoration">
-        <div class="circle-blur circle-1"></div>
-        <div class="circle-blur circle-2"></div>
-        <div class="circle-blur circle-3"></div>
-    </div>
-    
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="name">Alan Daniel Ixtlahuaca Casas</h1>
-            
-            <!-- Contacto -->
-            <div class="header-contact">
-                <div class="contact-item" onclick="openCopyModal('+52 33 1574 5851')">
-                    <img src="images/whatsapp.svg" alt="WhatsApp" class="contact-icon">
-                    <span>+52 33 1574 5851</span>
-                </div>
-                <div class="contact-item" onclick="openCopyModal('metalbuckets@outlook.com')">
-                    <img src="images/email.svg" alt="Email" class="contact-icon">
-                    <span>metalbuckets@outlook.com</span>
-                </div>
-                <a href="https://github.com/Alan-Ixtlahuaca" target="_blank" class="contact-item">
-                    <img src="images/github.svg" alt="GitHub" class="contact-icon">
-                    <span>GitHub</span>
+
+    <!-- Dark mode toggle -->
+    <button class="theme-toggle" id="themeToggle" title="Cambiar tema" aria-label="Cambiar tema">
+        <span class="tt-sun">☀️</span>
+        <span class="tt-moon">🌙</span>
+    </button>
+
+    <!-- Floating vertical nav -->
+    <nav class="side-nav" id="sideNav">
+        <div class="side-nav-inner">
+            <a href="#hero"     class="sn-item active"><span class="sn-icon">🏠</span>Inicio</a>
+            <a href="#about"    class="sn-item"><span class="sn-icon">👤</span>Sobre mí</a>
+            <a href="#edu"      class="sn-item"><span class="sn-icon">🎓</span>Educación</a>
+            <a href="#exp"      class="sn-item"><span class="sn-icon">💼</span>Experiencia</a>
+            <a href="#projects" class="sn-item"><span class="sn-icon">🚀</span>Proyectos</a>
+            <a href="#skills"   class="sn-item"><span class="sn-icon">⚡</span>Habilidades</a>
+            <a href="#tech"     class="sn-item"><span class="sn-icon">🛠️</span>Tecnologías</a>
+            <a href="#lang"     class="sn-item"><span class="sn-icon">🌐</span>Idiomas</a>
+        </div>
+    </nav>
+
+    <!-- ======== HERO ======== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-text">ALAN</div>
+        <div class="hero-inner">
+            <p class="hero-eyebrow">Curriculum Vitae  2026</p>
+            <h1 class="hero-name">
+                <span class="hn-line">Alan Daniel</span>
+                <span class="hn-line italic">Ixtlahuaca</span>
+                <span class="hn-line">Casas</span>
+            </h1>
+            <div class="hero-meta">
+                <span class="hm-chip">Backend Developer</span>
+                <span class="hm-sep"></span>
+                <span class="hm-chip">Líder de Proyectos</span>
+                <span class="hm-sep"></span>
+                <span class="hm-chip">Ing. Sistemas</span>
+            </div>
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="openCopyModal('+52 33 1574 5851')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                    +52 33 1574 5851
+                </button>
+                <button class="btn-outline" onclick="openCopyModal('metalbuckets@outlook.com')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                    metalbuckets@outlook.com
+                </button>
+                <a href="https://github.com/Alan-Ixtlahuaca" target="_blank" class="btn-outline">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub
                 </a>
-                <a href="Micv\Curriculum Alan.pdf" download class="contact-item">
-                    <img src="images/download.svg" alt="Descargar CV" class="contact-icon">
-                    <span>Descargar CV</span>
+                <a href="Micv\Curriculum Alan.pdf" download class="btn-dark">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v13M7 11l5 5 5-5"/><path d="M3 19h18"/></svg>
+                    Descargar CV
                 </a>
             </div>
-
-            <!-- Navegación -->
-            <nav class="nav-buttons">
-                <a href="#acerca" class="nav-btn">Acerca de Mí</a>
-                <a href="#educacion" class="nav-btn">Educación</a>
-                <a href="#experiencia" class="nav-btn">Experiencia</a>
-                <a href="#proyectos" class="nav-btn">Proyectos</a>
-                <a href="#habilidades" class="nav-btn">Habilidades</a>
-                <a href="#tecnologias" class="nav-btn">Tecnologías</a>
-                <a href="#idiomas" class="nav-btn">Idiomas</a>
-            </nav>
         </div>
-    </header>
+        <div class="hero-scroll-line"></div>
+    </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <!-- Acerca de Mí -->
-            <section id="acerca" class="card">
-                <h2 class="section-title">Acerca de Mí</h2>
-                <p class="about-text">
+    <!-- ======== CONTENIDO ======== -->
+    <main class="page-wrap">
+
+        <!-- Sobre mí -->
+        <section class="section" id="about" data-section="about">
+            <div class="s-label spawn-left">01  Sobre Mí</div>
+            <div class="s-body">
+                <h2 class="s-title spawn-up">Backend Developer<br><em>con visión de líder.</em></h2>
+                <p class="s-text spawn-up" style="--d:.15s">
                     Estudiante con sólida base técnica en ingeniería de software y redes, con un enfoque especializado como desarrollador Backend. He liderado proyectos académicos, que incluyen desde la arquitectura de sistemas ERP hasta el desarrollo de la lógica y base de datos de plataformas tipo red social, enfocándome en automatización de procesos. Busco mi primera oportunidad profesional para aplicar mis conocimientos técnicos, aportando compromiso y una alta capacidad de aprendizaje.
                 </p>
-            </section>
+            </div>
+        </section>
 
-            <!-- Educación -->
-            <section id="educacion" class="card">
-                <h2 class="section-title">Educación</h2>
-                <div class="education-item">
-                    <h3 class="education-title">Ingeniería en Sistemas Computacionales</h3>
-                    <p class="education-subtitle">(En curso)</p>
-                    <p class="education-institution">Instituto Tecnológico Superior de Zacatecas Sur (ITSZaS)</p>
-                    <p class="education-date">Agosto 2022 - Actualidad</p>
+        <!-- Educación -->
+        <section class="section section-alt" id="edu" data-section="edu">
+            <div class="s-label spawn-left">02  Educación</div>
+            <div class="s-body edu-body">
+                <div class="edu-year spawn-right">2022<br><br>Actualidad</div>
+                <div class="edu-info">
+                    <p class="edu-status spawn-up">Actualmente en curso</p>
+                    <h2 class="s-title spawn-up" style="--d:.1s">Ingeniería en<br>Sistemas Computacionales</h2>
+                    <p class="edu-school spawn-up" style="--d:.2s">Instituto Tecnológico Superior de Zacatecas Sur <strong>(ITSZaS)</strong></p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Experiencia -->
-            <section id="experiencia" class="card">
-                <h2 class="section-title">Experiencia</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2025-2026</div>
-                        <div class="timeline-content">
-                            <h3 class="job-title">Líder de Proyecto ERP | SOLTECH - ITSZAS</h3>
-                            <p class="job-description">
-                                Responsable de la dirección integral del proyecto, desde la planificación estratégica de tareas hasta la gestión de todo el ciclo de desarrollo. Lideré la organización de los equipos de trabajo y la toma de decisiones técnicas, asegurando el cumplimiento de objetivos y la entrega final del sistema en el servidor del cliente.
-                            </p>
-                        </div>
+        <!-- Experiencia -->
+        <section class="section" id="exp" data-section="exp">
+            <div class="s-label spawn-left">03  Experiencia</div>
+            <div class="exp-grid">
+                <div class="exp-card spawn-up" style="--d:.0s">
+                    <span class="exp-num">01</span>
+                    <p class="exp-date">2025  2026</p>
+                    <h3 class="exp-role">Líder de Proyecto ERP</h3>
+                    <p class="exp-company">SOLTECH  ITSZaS</p>
+                    <p class="exp-desc">Responsable de la dirección integral del proyecto, desde la planificación estratégica de tareas hasta la gestión de todo el ciclo de desarrollo. Lideré la organización de los equipos de trabajo y la toma de decisiones técnicas, asegurando el cumplimiento de objetivos y la entrega final del sistema en el servidor del cliente.</p>
+                    <a href="https://github.com/FabricaSoftwareTecnm/erp-soltech" target="_blank" rel="noopener" class="proj-btn"><img src="images/GitHub_Invertocat_Black.svg" width="14" height="14" alt="GitHub"> Ver repositorio</a>
+                </div>
+                <div class="exp-card spawn-up" style="--d:.15s">
+                    <span class="exp-num">02</span>
+                    <p class="exp-date">Fábrica de Software</p>
+                    <h3 class="exp-role">Líder de Backend & Diseñador de BD</h3>
+                    <p class="exp-company">Proyecto LinkedTec  Red Social</p>
+                    <p class="exp-desc">Desempeñé el rol de líder del área de Backend, asumiendo la responsabilidad del diseño y la arquitectura de la base de datos para garantizar la integridad y escalabilidad de la información.</p>
+                    <a href="https://github.com/Linked-Tec/Linked-back" target="_blank" rel="noopener" class="proj-btn"><img src="images/GitHub_Invertocat_Black.svg" width="14" height="14" alt="GitHub"> Ver repositorio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="section section-alt" id="projects" data-section="projects">
+            <div class="s-label spawn-left">04  Proyectos Escolares</div>
+            <div class="proj-list">
+                <div class="proj-row spawn-slide" style="--d:.0s">
+                    <span class="pr-num">01</span>
+                    <div class="pr-info">
+                        <h3>Red Code <span> Videojuego FPS</span></h3>
+                        <p>Desarrollo de un shooter de primera persona en Unreal Engine 5. Programación de mecánicas de disparo, IA básica para enemigos, diseño de mapas.</p>
+                        <a href="https://www.youtube.com/watch?v=iECHTTp7_Sc&feature=youtu.be" target="_blank" rel="noopener" class="proj-btn proj-btn--yt">&#9654; Ver demo</a>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">Proyecto en Fábrica de Software</div>
-                        <div class="timeline-content">
-                            <h3 class="job-title">Líder de Backend y Diseñador de Base de Datos | Proyecto LinkedTec</h3>
-                            <p class="job-description">
-                                Red Social. En este proyecto, desempeñé el rol de líder del área de Backend, asumiendo la responsabilidad del diseño y la arquitectura de la base de datos para garantizar la integridad y escalabilidad de la información.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Proyectos Escolares -->
-            <section id="proyectos" class="card">
-                <h2 class="section-title">Proyectos Escolares</h2>
-                
-                <div class="project">
-                    <h3 class="project-title">Red Code (Videojuego FPS)</h3>
-                    <p class="project-description">
-                        Desarrollo de un shooter de primera persona en Unreal Engine 5. Programación de mecánicas de disparo, inteligencia artificial básica para enemigos, diseño de mapas y la experiencia de juego.
-                    </p>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">Compilador</h3>
-                    <p class="project-description">
-                        Diseño y desarrollo de un lenguaje de programación propio, incluyendo el análisis léxico, sintáctico y semántico para la ejecución de instrucciones personalizadas.
-                    </p>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">Estructuras de Datos</h3>
-                    <p class="project-description">
-                        Implementación y optimización de algoritmos complejos y estructuras de datos para la gestión eficiente de memoria y procesos.
-                    </p>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">Prototipo Móvil ESP32</h3>
-                    <p class="project-description">
-                        Desarrollo de un vehículo controlado vía Bluetooth mediante microcontroladores, integrando programación de hardware con electrónica aplicada.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Habilidades Blandas -->
-            <section id="habilidades" class="card">
-                <h2 class="section-title">Habilidades Blandas</h2>
-                <ul class="skills-list">
-                    <li>Liderazgo de equipos</li>
-                    <li>Resolución de problemas</li>
-                    <li>Trabajo en equipo</li>
-                    <li>Aprendizaje autónomo (capacidad de aprender nuevas tecnologías)</li>
-                    <li>Comunicación asertiva</li>
-                    <li>Gestión del tiempo</li>
-                    <li>Pensamiento analítico</li>
-                    <li>Adaptabilidad</li>
-                </ul>
-            </section>
-
-            <!-- Habilidades Duras -->
-            <section class="card">
-                <h2 class="section-title">Habilidades Duras</h2>
-                <ul class="skills-list">
-                    <li>Desarrollo Backend</li>
-                    <li>Bases de Datos</li>
-                    <li>Control de Versiones</li>
-                    <li>Metodologías Ágiles</li>
-                    <li>IA Aplicada al Desarrollo</li>
-                </ul>
-            </section>
-
-            <!-- Tecnologías -->
-            <section id="tecnologias" class="card">
-                <h2 class="section-title">Tecnologías</h2>
-                
-                <div class="tech-category">
-                    <h3 class="tech-title">Lenguajes</h3>
-                    <div class="tech-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">JavaScript</span>
+                    <div class="pr-tags">
+                        <span class="pr-tag-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" alt="Unreal Engine 5" width="16" height="16"> Unreal Engine 5</span>
+                        <span class="pr-tag-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" width="16" height="16"> C++</span>
+                        <span>IA</span>
                     </div>
                 </div>
-
-                <div class="tech-category">
-                    <h3 class="tech-title">Bases de Datos</h3>
-                    <div class="tech-tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">MySQL</span>
+                <div class="proj-row spawn-slide" style="--d:.1s">
+                    <span class="pr-num">02</span>
+                    <div class="pr-info">
+                        <h3>Compilador <span>— Lenguaje propio</span></h3>
+                        <p>Diseño y desarrollo de un lenguaje de programación propio, incluyendo análisis léxico, sintáctico y semántico.</p>
+                        <a href="https://github.com/Alan-Ixtlahuaca/Compilador-" target="_blank" rel="noopener" class="proj-btn"><img src="images/GitHub_Invertocat_Black.svg" width="14" height="14" alt="GitHub"> Ver repositorio</a>
                     </div>
-                    <p class="tech-note">(Diseño y Administración)</p>
-                </div>
-
-                <div class="tech-category">
-                    <h3 class="tech-title">IA para Desarrollo</h3>
-                    <div class="tech-tags">
-                        <span class="tag">Copilot</span>
-                        <span class="tag">Gemini</span>
-                        <span class="tag">Claude</span>
-                    </div>
-                    <p class="tech-note">Uso avanzado para optimización de código y depuración</p>
-                </div>
-
-                <div class="tech-category">
-                    <h3 class="tech-title">Herramientas</h3>
-                    <div class="tech-tags">
-                        <span class="tag">Git</span>
-                        <span class="tag">GitHub</span>
+                    <div class="pr-tags">
+                        <span class="pr-tag-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" width="16" height="16"> Python</span>
                     </div>
                 </div>
-
-                <div class="tech-category">
-                    <h3 class="tech-title">Metodologías</h3>
-                    <div class="tech-tags">
-                        <span class="tag">Scrum</span>
-                        <span class="tag">KANBAN</span>
+                <div class="proj-row spawn-slide" style="--d:.2s">
+                    <span class="pr-num">03</span>
+                    <div class="pr-info">
+                        <h3>Estructuras de Datos <span>— Algoritmos</span></h3>
+                        <p>Implementación y optimización de algoritmos complejos para la gestión eficiente de memoria y procesos.</p>
+                    </div>
+                    <div class="pr-tags">
+                        <span class="pr-tag-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" width="16" height="16"> Python</span>
                     </div>
                 </div>
-            </section>
+                <div class="proj-row spawn-slide" style="--d:.3s">
+                    <span class="pr-num">04</span>
+                    <div class="pr-info">
+                        <h3>Prototipo Móvil <span> ESP32</span></h3>
+                        <p>Vehículo controlado vía Bluetooth mediante microcontroladores, integrando programación de hardware con electrónica aplicada.</p>
+                        <a href="https://github.com/Alan-Ixtlahuaca/CarroESP32" target="_blank" rel="noopener" class="proj-btn"><img src="images/GitHub_Invertocat_Black.svg" width="14" height="14" alt="GitHub"> Ver repositorio</a>
+                    </div>
+                    <div class="pr-tags"><span>ESP32</span><span>Bluetooth</span><span>Hardware</span></div>
+                </div>
+            </div>
+        </section>
 
-            <!-- Idiomas -->
-            <section id="idiomas" class="card">
-                <h2 class="section-title">Idiomas</h2>
-                <ul class="skills-list">
-                    <li>Español</li>
-                    <li>Inglés Básico</li>
-                </ul>
-            </section>
-        </div>
+        <!-- Habilidades -->
+        <section class="section" id="skills" data-section="skills">
+            <div class="s-label spawn-left">05  Habilidades</div>
+            <div class="skills-cols">
+                <div class="sk-col">
+                    <h3 class="sk-col-title spawn-up">Blandas</h3>
+                    <ul class="sk-list">
+                        <li class="spawn-slide" style="--d:.05s">👥 Liderazgo de equipos</li>
+                        <li class="spawn-slide" style="--d:.1s">🧩 Resolución de problemas</li>
+                        <li class="spawn-slide" style="--d:.15s">🤝 Trabajo en equipo</li>
+                        <li class="spawn-slide" style="--d:.2s">📚 Aprendizaje autónomo</li>
+                        <li class="spawn-slide" style="--d:.25s">💬 Comunicación asertiva</li>
+                        <li class="spawn-slide" style="--d:.3s">⏱️ Gestión del tiempo</li>
+                        <li class="spawn-slide" style="--d:.35s">🔍 Pensamiento analítico</li>
+                        <li class="spawn-slide" style="--d:.4s">🔄 Adaptabilidad</li>
+                    </ul>
+                </div>
+                <div class="sk-divider"></div>
+                <div class="sk-col">
+                    <h3 class="sk-col-title spawn-up" style="--d:.1s">Duras</h3>
+                    <ul class="sk-list">
+                        <li class="spawn-slide" style="--d:.15s">⚙️ Desarrollo Backend</li>
+                        <li class="spawn-slide" style="--d:.2s">🗄️ Bases de Datos</li>
+                        <li class="spawn-slide" style="--d:.25s">📦 Control de Versiones</li>
+                        <li class="spawn-slide" style="--d:.3s">🔁 Metodologías Ágiles</li>
+                        <li class="spawn-slide" style="--d:.35s">🤖 IA Aplicada al Desarrollo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologías -->
+        <section class="section section-alt" id="tech" data-section="tech">
+            <div class="s-label spawn-left">06 — Tecnologías</div>
+            <div class="tech-blocks">
+                <div class="tb spawn-zoom" style="--d:.0s">
+                    <p class="tb-label">Lenguajes</p>
+                    <div class="tb-chips">
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" width="18" height="18">Java</span>
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" width="18" height="18">Python</span>
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" width="18" height="18">Node.js</span>
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" width="18" height="18">JavaScript</span>
+                    </div>
+                </div>
+                <div class="tb spawn-zoom" style="--d:.08s">
+                    <p class="tb-label">Bases de Datos</p>
+                    <div class="tb-chips">
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" width="18" height="18">SQL / MySQL</span>
+                    </div>
+                    <p class="tb-note">Diseño y Administración</p>
+                </div>
+                <div class="tb spawn-zoom" style="--d:.16s">
+                    <p class="tb-label">IA para Desarrollo</p>
+                    <div class="tb-chips">
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Copilot" width="18" height="18">Copilot</span>
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Gemini" width="18" height="18">Gemini</span>
+                        <span>Claude</span>
+                    </div>
+                    <p class="tb-note">Optimización de código y depuración</p>
+                </div>
+                <div class="tb spawn-zoom" style="--d:.24s">
+                    <p class="tb-label">Herramientas</p>
+                    <div class="tb-chips">
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" width="18" height="18">Git</span>
+                        <span class="tc-logo"><img src="images/GitHub_Invertocat_Black.svg" alt="GitHub" width="18" height="18">GitHub</span>
+                    </div>
+                </div>
+                <div class="tb spawn-zoom" style="--d:.32s">
+                    <p class="tb-label">Metodologías</p>
+                    <div class="tb-chips">
+                        <span class="tc-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Scrum" width="18" height="18">Scrum</span>
+                        <span>KANBAN</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Idiomas -->
+        <section class="section" id="lang" data-section="lang">
+            <div class="s-label spawn-left">07  Idiomas</div>
+            <div class="lang-cards">
+                <div class="lang-card spawn-zoom" style="--d:.0s">
+                    <span class="lc-flag"></span>
+                    <h3>Español</h3>
+                    <p>Nativo</p>
+                    <div class="lc-bar"><div class="lc-fill" style="width:100%"></div></div>
+                </div>
+                <div class="lang-card spawn-zoom" style="--d:.12s">
+                    <span class="lc-flag"></span>
+                    <h3>Inglés</h3>
+                    <p>Básico</p>
+                    <div class="lc-bar"><div class="lc-fill" style="width:30%"></div></div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Alan Daniel Ixtlahuaca Casas. Todos los derechos reservados.</p>
-        </div>
+    <footer class="site-footer">
+        <span>&nbsp;2026&nbsp;Alan Daniel Ixtlahuaca Casas</span>
+        <span class="sf-sep"></span>
+        <span>Todos los derechos reservados</span>
     </footer>
 
-    <script>
-        let lastScroll = 0;
-        const header = document.querySelector('.header');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 0) {
-                header.classList.remove('hidden');
-                return;
-            }
-            
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                header.classList.add('hidden');
-            } else {
-                header.classList.remove('hidden');
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Modal de copiar
-        function openCopyModal(text) {
-            document.getElementById('copyModal').style.display = 'flex';
-            document.getElementById('modalText').textContent = text;
-            document.getElementById('copyModal').dataset.text = text;
-            document.getElementById('copySuccess').style.display = 'none';
-        }
-
-        function closeCopyModal() {
-            document.getElementById('copyModal').style.display = 'none';
-        }
-
-        function copyToClipboard() {
-            const text = document.getElementById('copyModal').dataset.text;
-            navigator.clipboard.writeText(text).then(() => {
-                document.getElementById('copySuccess').style.display = 'block';
-                setTimeout(() => {
-                    closeCopyModal();
-                }, 1000);
-            });
-        }
-
-        // Cerrar modal al hacer clic fuera
-        window.onclick = function(event) {
-            const modal = document.getElementById('copyModal');
-            if (event.target === modal) {
-                closeCopyModal();
-            }
-        }
-    </script>
-
-    <!-- Modal de Copiar -->
+    <!-- Modal -->
     <div id="copyModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeCopyModal()">&times;</span>
-            <div id="modalText" class="modal-text"></div>
-            <button class="copy-btn" onclick="copyToClipboard()">
-                📋 Copiar
-            </button>
-            <div id="copySuccess" class="copy-success">¡Copiado!</div>
+        <div class="modal-inner">
+            <button class="modal-x" onclick="closeCopyModal()"></button>
+            <p class="modal-hint">Copiar al portapapeles</p>
+            <div id="modalText" class="modal-val"></div>
+            <button class="modal-btn" onclick="copyToClipboard()">Copiar</button>
+            <p id="copySuccess" class="modal-ok">¡Copiado!</p>
         </div>
     </div>
+
+    <script>
+    /* ---- Dark mode toggle ---- */
+    const toggle = document.getElementById('themeToggle');
+    const saved  = localStorage.getItem('theme');
+    if(saved === 'dark') document.body.classList.add('dark');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    /* ---- Side nav active ---- */
+    const sections = document.querySelectorAll('[data-section]');
+    const snItems  = document.querySelectorAll('.sn-item');
+    const sectionIds = ['hero','about','edu','exp','projects','skills','tech','lang'];
+
+    function updateNav(){
+        let current = 'hero';
+        document.querySelectorAll('section[id]').forEach(sec => {
+            if(window.scrollY >= sec.offsetTop - window.innerHeight/2) current = sec.id;
+        });
+        snItems.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#'+current);
+        });
+    }
+    window.addEventListener('scroll', updateNav, {passive:true});
+
+    /* ---- Spawn on scroll ---- */
+    const spawnEls = document.querySelectorAll('.spawn-up,.spawn-left,.spawn-right,.spawn-slide,.spawn-zoom');
+    const spawnObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if(e.isIntersecting){ e.target.classList.add('spawned'); spawnObs.unobserve(e.target); }
+        });
+    }, { threshold: 0.12 });
+    spawnEls.forEach(el => spawnObs.observe(el));
+
+    /* ---- Bar animation (idiomas) ---- */
+    const barObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if(e.isIntersecting){
+                e.target.querySelectorAll('.lc-fill').forEach(b => b.classList.add('fill-anim'));
+                barObs.unobserve(e.target);
+            }
+        });
+    }, {threshold:0.3});
+    document.querySelectorAll('.lang-card').forEach(c => barObs.observe(c));
+
+    /* ---- Modal ---- */
+    function openCopyModal(text){
+        document.getElementById('copyModal').style.display='flex';
+        document.getElementById('modalText').textContent=text;
+        document.getElementById('copyModal').dataset.text=text;
+        document.getElementById('copySuccess').style.display='none';
+    }
+    function closeCopyModal(){ document.getElementById('copyModal').style.display='none'; }
+    function copyToClipboard(){
+        navigator.clipboard.writeText(document.getElementById('copyModal').dataset.text).then(()=>{
+            document.getElementById('copySuccess').style.display='block';
+            setTimeout(closeCopyModal,900);
+        });
+    }
+    window.onclick = e => { if(e.target===document.getElementById('copyModal')) closeCopyModal(); };
+    </script>
 </body>
 </html>
